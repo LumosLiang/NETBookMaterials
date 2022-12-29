@@ -10,8 +10,10 @@ using (ServiceProvider sp = services.BuildServiceProvider())
     testService.Name = "tom";
     testService.SayHi();
 }*/
+
 ServiceCollection services = new ServiceCollection();
 services.AddTransient<TestServiceImpl>();
+
 using (ServiceProvider sp = services.BuildServiceProvider())
 {
     var ts1 = sp.GetRequiredService<TestServiceImpl>();

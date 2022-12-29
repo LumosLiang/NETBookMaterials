@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlClient;
+
 string connStr = "Data Source=.;Initial Catalog=demo1;Integrated Security=True";
 using (var conn = new SqlConnection(connStr))
 {

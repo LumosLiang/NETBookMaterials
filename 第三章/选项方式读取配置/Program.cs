@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 ConfigurationBuilder configBuilder = new ConfigurationBuilder();
 configBuilder.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 IConfigurationRoot config = configBuilder.Build();
+
 ServiceCollection services = new ServiceCollection();
 services.AddOptions()
 	.Configure<DbSettings>(e=>config.GetSection("DB").Bind(e))

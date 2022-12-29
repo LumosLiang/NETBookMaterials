@@ -12,9 +12,11 @@ services.AddScoped<IDbConnection>(sp => {
 });
 services.AddScoped<IUserDAO, UserDAO>();
 services.AddScoped<IUserBiz, UserBiz>();
+
 using (ServiceProvider sp = services.BuildServiceProvider())
 {
     var userBiz = sp.GetRequiredService<IUserBiz>();
     bool b = userBiz.CheckLogin("yzk", "123456");
     Console.WriteLine(b);
 }
+

@@ -11,6 +11,7 @@ static IEnumerable<int> MyWhere(IEnumerable<int> nums, Func<int, bool> filter)
 		if (filter(n)) yield return n;
 	}
 }*/
+
 int[] arrays = { 2, 8, 29, 19, 12, 13, 99, 89, 105, 108, 81 };
 var nums2 = MyWhere(arrays, n => n > 30);
 Console.WriteLine(string.Join(",", nums2));
@@ -23,3 +24,4 @@ static IEnumerable<int> MyWhere(IEnumerable<int> nums, Func<int, bool> filter)
 		if (filter(n)) yield return n;
 	}
 }
+
