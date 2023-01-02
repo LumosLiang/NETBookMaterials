@@ -38,6 +38,7 @@ namespace 第一个WebAPI项目.Controllers
             System.IO.File.WriteAllText(filename, req.Content);
             return filename;
         }
+
         [ApiExplorerSettings(IgnoreApi = true)]
         public string AA()
         {
